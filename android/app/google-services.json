@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "39633460065",
+    "project_id": "ostad-14-crafty-bay",
+    "storage_bucket": "ostad-14-crafty-bay.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39633460065:android:ff7fe8a9b4ea0e01fe0320",
+        "android_client_info": {
+          "package_name": "com.example.ostad_14_ecommerce_project_crafty_bay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_C5NoBeYVRAmkqDOZ0CeOPniPp1c9iXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
