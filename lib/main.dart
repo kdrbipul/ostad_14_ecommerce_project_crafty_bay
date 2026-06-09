@@ -1,10 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'firebase_options.dart';
 
 // Platform  Firebase App Id
 // android   1:39633460065:android:ff7fe8a9b4ea0e01fe0320
 // ios       1:39633460065:ios:d9aa142cbd7fe57efe0320
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
