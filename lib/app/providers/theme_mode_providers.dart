@@ -17,7 +17,7 @@ class ThemeModeProvider extends ChangeNotifier{
     await sharedPreferences.setString("theme-mode", mode.name);
   }
 
-  Future<void> setDefaultThemeMode (ThemeMode mode) async {
+  Future<void> setDefaultThemeMode () async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     String? themeMode = sharedPreferences.getString("theme-mode");
     if (themeMode != null){
