@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ostad_14_ecommerce_project_crafty_bay/app/providers/theme_mode_providers.dart';
-import 'package:provider/provider.dart';
+import 'package:ostad_14_ecommerce_project_crafty_bay/l10n/app_localizations.dart';
 
-import '../../../shared/presentation/widgets/theme_toggle_button.dart';
 import '../widgets/app_logo.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -28,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
           Spacer(),
           CircularProgressIndicator(),
           SizedBox(height: 20,),
-          Text('version 1.0.0'),
+          Text('${AppLocalizations.of(context)?.version} 1.0.0'),
           const SizedBox(height: 16,),
         ],
       ),
