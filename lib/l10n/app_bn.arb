@@ -1,3 +1,6 @@
 {
-  "version" : "সংস্করণ"
+  "version" : "সংস্করণ",
+  "email"   : "Email bn",
+  "password" : "Password bn",
+  "signIn"    : "প্রবেশ করুন"
 }

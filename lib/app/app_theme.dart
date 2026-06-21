@@ -18,6 +18,7 @@ class AppTheme {
       labelLarge: TextStyle(color: Colors.grey, fontWeight: FontWeight.w500),
     ),
     inputDecorationTheme: _inputDecorationTheme,
+    filledButtonTheme: _filledButtonThemeData,
   );
 
   static final ThemeData _darkThemeData = ThemeData(
@@ -31,11 +32,18 @@ class AppTheme {
       labelLarge: TextStyle(color: Colors.grey, fontWeight: FontWeight.w500),
     ),
     inputDecorationTheme: _inputDecorationTheme,
+    filledButtonTheme: _filledButtonThemeData,
   );
+
+
+
 
   static final InputDecorationTheme _inputDecorationTheme =
       InputDecorationTheme(
         contentPadding: .only(left: 12),
+        border: OutlineInputBorder(
+          borderSide: BorderSide(color: AppColors.themeColor, width: 2),
+        ),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: AppColors.themeColor, width: 2),
         ),
@@ -46,4 +54,12 @@ class AppTheme {
           borderSide: BorderSide(color: Colors.red, width: 2),
         ),
       );
+  static final FilledButtonThemeData _filledButtonThemeData =
+  FilledButtonThemeData(style: FilledButton.styleFrom(
+        backgroundColor: AppColors.themeColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: .circular(8),
+        ),
+        fixedSize: Size.fromWidth(double.maxFinite)
+    ),);
 }
