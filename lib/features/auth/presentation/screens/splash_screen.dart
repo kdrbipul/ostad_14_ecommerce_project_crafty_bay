@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ostad_14_ecommerce_project_crafty_bay/features/auth/presentation/screens/sign_in_screen.dart';
 import 'package:ostad_14_ecommerce_project_crafty_bay/l10n/app_localizations.dart';
 
 import '../widgets/app_logo.dart';
@@ -12,26 +13,37 @@ class SplashScreen extends StatefulWidget {
   static const String name = '/splash';
 }
 
+
+
 class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _navigateToNextScreen();
+  }
+
+  Future<void> _navigateToNextScreen() async {
+    await Future.delayed(Duration(seconds: 2));
+    Navigator.pushReplacementNamed(context, SignInScreen.name);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: Column(
         children: [
           Spacer(),
           // ThemeToggle(),
-          Center(
-            child: AppLogo(),
-          ),
+          Center(child: AppLogo()),
           Spacer(),
           CircularProgressIndicator(),
-          SizedBox(height: 20,),
+          SizedBox(height: 20),
           Text('${AppLocalizations.of(context)?.version} 1.0.0'),
-          const SizedBox(height: 16,),
+          const SizedBox(height: 16),
         ],
       ),
     );
   }
 }
-
-
