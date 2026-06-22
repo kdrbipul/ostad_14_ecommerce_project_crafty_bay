@@ -121,6 +121,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sign In'**
   String get signIn;
+
+  /// No description provided for @signUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up'**
+  String get signUp;
+
+  /// No description provided for @firstName.
+  ///
+  /// In en, this message translates to:
+  /// **'First Name'**
+  String get firstName;
+
+  /// No description provided for @lastName.
+  ///
+  /// In en, this message translates to:
+  /// **'Last Name'**
+  String get lastName;
+
+  /// No description provided for @confirmPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Password'**
+  String get confirmPassword;
+
+  /// No description provided for @phone.
+  ///
+  /// In en, this message translates to:
+  /// **'phone'**
+  String get phone;
+
+  /// No description provided for @city.
+  ///
+  /// In en, this message translates to:
+  /// **'city'**
+  String get city;
 }
 
 class _AppLocalizationsDelegate

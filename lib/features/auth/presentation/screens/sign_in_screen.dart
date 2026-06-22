@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ostad_14_ecommerce_project_crafty_bay/features/shared/presentation/utils/validators.dart';
+import 'package:ostad_14_ecommerce_project_crafty_bay/features/auth/presentation/screens/sign_up_screen.dart';
 
 import '../../../../app/extensions/localization_extension.dart';
+import '../../../shared/presentation/utils/validators.dart';
 import '../widgets/app_logo.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -68,7 +69,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     child: Text(context.localization.signIn),
                   ),
                   TextButton(onPressed: _onTapSignUpButton,
-                      child: Text("Dont have an account? Sign Up"),
+                      child: Text("Don't have an account? Sign Up"),
                   ),
                 ],
               ),
@@ -84,7 +85,9 @@ class _SignInScreenState extends State<SignInScreen> {
 
     }
   }
-  void _onTapSignUpButton() {}
+  void _onTapSignUpButton() {
+    Navigator.pushNamed(context, SignUpScreen.name);
+  }
 
   @override
   void dispose() {

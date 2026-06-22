@@ -2,5 +2,11 @@
   "version" : "সংস্করণ",
   "email"   : "Email bn",
   "password" : "Password bn",
-  "signIn"    : "প্রবেশ করুন"
+  "signIn"    : "প্রবেশ করুন",
+  "signUp" : "Sign Up",
+  "firstName" : "নামের প্রথম অংশ",
+  "lastName" : "নামের শেষ অংশ",
+  "confirmPassword" : "Confirm Password",
+  "phone" : "মোবাইল নাম্বার",
+  "city" : "শহর"
 }

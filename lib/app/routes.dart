@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ostad_14_ecommerce_project_crafty_bay/features/auth/presentation/screens/sign_in_screen.dart';
 
+import '../features/auth/presentation/screens/sign_in_screen.dart';
+import '../features/auth/presentation/screens/sign_up_screen.dart';
 import '../features/auth/presentation/screens/splash_screen.dart';
 
 class AppRoutes {
@@ -11,6 +12,8 @@ class AppRoutes {
         widget = SplashScreen();
       case SignInScreen.name:
         widget = SignInScreen();
+      case SignUpScreen.name:
+        widget = SignUpScreen();
     }
     return MaterialPageRoute(builder: (ctx) => widget);
   }

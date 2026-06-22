@@ -19,4 +19,22 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get signIn => 'প্রবেশ করুন';
+
+  @override
+  String get signUp => 'Sign Up';
+
+  @override
+  String get firstName => 'নামের প্রথম অংশ';
+
+  @override
+  String get lastName => 'নামের শেষ অংশ';
+
+  @override
+  String get confirmPassword => 'Confirm Password';
+
+  @override
+  String get phone => 'মোবাইল নাম্বার';
+
+  @override
+  String get city => 'শহর';
 }
