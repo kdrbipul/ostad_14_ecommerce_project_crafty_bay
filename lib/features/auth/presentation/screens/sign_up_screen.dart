@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ostad_14_ecommerce_project_crafty_bay/features/auth/presentation/screens/verify_otp_screen.dart';
 import 'package:ostad_14_ecommerce_project_crafty_bay/features/shared/presentation/utils/validators.dart';
 
 import '../../../../app/extensions/localization_extension.dart';
@@ -158,7 +159,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
 
   void _onTapSignUpButton() {
-    if (_formKey.currentState!.validate()) {}
+    // if (_formKey.currentState!.validate()) {}
+    Navigator.pushNamed(context, VerifyOTPScreen.name);
   }
 
   @override

@@ -8,5 +8,6 @@
     "lastName" : "Last Name",
     "confirmPassword" : "Confirm Password",
     "phone" : "phone",
-    "city" : "city"
+    "city" : "city",
+    "verify" : "Verify"
 }

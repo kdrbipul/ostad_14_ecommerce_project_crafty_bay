@@ -8,5 +8,6 @@
   "lastName" : "নামের শেষ অংশ",
   "confirmPassword" : "Confirm Password",
   "phone" : "মোবাইল নাম্বার",
-  "city" : "শহর"
+  "city" : "শহর",
+  "verify" : "যাচাই"
 }
