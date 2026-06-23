@@ -32,6 +32,7 @@ class AppTheme {
     ),
     textTheme: TextTheme(
       titleLarge: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
+      titleMedium: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
       labelLarge: TextStyle(color: Colors.grey, fontWeight: FontWeight.w500),
     ),
     inputDecorationTheme: _inputDecorationTheme,

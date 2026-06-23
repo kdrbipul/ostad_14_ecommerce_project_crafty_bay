@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../widgets/home_app_bar.dart';
 import '../widgets/home_carousel_slider.dart';
+import '../widgets/home_category_section.dart';
 import '../widgets/product_search_bar.dart';
+import '../widgets/section_header.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -18,19 +20,20 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: HomeAppBar(),
       body: Padding(
         padding: const .all(16),
-        child: SingleChildScrollView(child: Column(
-          spacing: 16,
-          children: [
-          ProductSearchBar(),
-          HomeCarouselSlider(),
-        ],)),
+        child: SingleChildScrollView(
+          child: Column(
+            spacing: 16,
+            children: [
+              ProductSearchBar(),
+              HomeCarouselSlider(),
+              SectionHeader(headerText: 'All Categories', onTapSeeAll: () {}),
+              HomeCategorySection(),
+            ],
+          ),
+        ),
       ),
     );
   }
 }
-
-
-
-
 
 

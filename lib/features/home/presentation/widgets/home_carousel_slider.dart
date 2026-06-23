@@ -15,6 +15,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = TextTheme.of(context);
     return Column(
       spacing: 8,
       children: [
@@ -67,3 +68,5 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
     );
   }
 }
+
+
