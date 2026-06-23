@@ -19,6 +19,9 @@ class AppTheme {
     ),
     inputDecorationTheme: _inputDecorationTheme,
     filledButtonTheme: _filledButtonThemeData,
+    appBarTheme: AppBarTheme(
+      color: Colors.white,
+    ),
   );
 
   static final ThemeData _darkThemeData = ThemeData(
