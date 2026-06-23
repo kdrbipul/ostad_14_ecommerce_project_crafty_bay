@@ -37,4 +37,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get city => 'শহর';
+
+  @override
+  String get verify => 'যাচাই';
 }

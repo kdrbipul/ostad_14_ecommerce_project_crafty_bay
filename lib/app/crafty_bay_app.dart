@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:ostad_14_ecommerce_project_crafty_bay/app/app_theme.dart';
-import 'package:ostad_14_ecommerce_project_crafty_bay/app/providers/local_provider.dart';
-import 'package:ostad_14_ecommerce_project_crafty_bay/app/providers/theme_mode_providers.dart';
-import 'package:ostad_14_ecommerce_project_crafty_bay/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 import '../features/auth/presentation/screens/splash_screen.dart';
+import '../features/shared/presentation/providers/main_nav_holder_provider.dart';
+import '../l10n/app_localizations.dart';
+import 'app_theme.dart';
+import 'providers/local_provider.dart';
+import 'providers/theme_mode_providers.dart';
 import 'routes.dart';
 
 
@@ -36,6 +37,7 @@ class _CraftyBayAppState extends State<CraftyBayApp> {
       providers: [
         ChangeNotifierProvider.value(value: _themeModeProvider),
         ChangeNotifierProvider.value(value: _localeProvider),
+        ChangeNotifierProvider(create: (_) =>MainNavHolderProvider(),),
       ],
       child: Consumer<LocaleProvider>(
         builder: (context, localeProvider, _) {

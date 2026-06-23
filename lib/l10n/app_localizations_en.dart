@@ -37,4 +37,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get city => 'city';
+
+  @override
+  String get verify => 'Verify';
 }
