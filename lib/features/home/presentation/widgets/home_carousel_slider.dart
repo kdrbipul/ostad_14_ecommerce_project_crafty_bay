@@ -22,6 +22,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
           options: CarouselOptions(
             height: 200.0,
             viewportFraction: 1,
+            autoPlay: true,
             onPageChanged: (index, _) {
               _selectedIndex.value = index;
             },
