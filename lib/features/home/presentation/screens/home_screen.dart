@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ostad_14_ecommerce_project_crafty_bay/features/shared/presentation/providers/main_nav_holder_provider.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../app/app_colors.dart';
+import '../../../shared/presentation/providers/main_nav_holder_provider.dart';
 import '../widgets/home_app_bar.dart';
 import '../widgets/home_carousel_slider.dart';
 import '../widgets/home_category_section.dart';
@@ -32,6 +34,49 @@ class _HomeScreenState extends State<HomeScreen> {
                 context.read<MainNavHolderProvider>().navigateToCategory();
               }),
               HomeCategorySection(),
+              SectionHeader(headerText: 'Popular', onTapSeeAll: () {
+                // context.read<MainNavHolderProvider>().navigateToCategory();
+              }),
+              Container(
+                width: 150,
+                decoration: BoxDecoration(
+                  borderRadius: .circular(8),
+                ),
+                child: Column(
+                  crossAxisAlignment: .start,
+                  children: [
+                    Container(
+                      height: 120,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        color: AppColors.themeColor.withAlpha(30),
+                        borderRadius: .only(
+                          topLeft: .circular(8),
+                          topRight: .circular(8),
+                        ),
+                      ),
+                      child: Image.asset('assets/images/shoes.png'),
+                    ),
+                    Text('Header of Product'),
+                    Row(
+                      mainAxisAlignment: .spaceBetween,
+                      children: [
+                        Text('\$300'),
+                        Wrap(
+                          children: [
+                            Icon(CupertinoIcons.star),
+                            Text('4.5')
+                          ],
+                        ),
+                        Container(
+                          child: Icon(CupertinoIcons.heart),
+                        ),
+                      ],
+                    )
+
+                  ],
+                ),
+              )
             ],
           ),
         ),
