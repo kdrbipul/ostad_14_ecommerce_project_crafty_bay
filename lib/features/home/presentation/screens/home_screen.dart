@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../app/app_colors.dart';
+import '../../../../app/assets_path.dart';
 import '../../../shared/presentation/providers/main_nav_holder_provider.dart';
 import '../widgets/home_app_bar.dart';
 import '../widgets/home_carousel_slider.dart';
@@ -55,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           topRight: .circular(8),
                         ),
                       ),
-                      child: Image.asset('assets/images/shoes.png'),
+                      child: Image.asset(AssetsPath.dummyPng),
                     ),
                     Text('Header of Product'),
                     Row(
