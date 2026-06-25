@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../app/app_colors.dart';
+import '../../../shared/presentation/widgets/category_card.dart';
 
 class HomeCategorySection extends StatelessWidget {
   const HomeCategorySection({super.key});
@@ -13,32 +13,12 @@ class HomeCategorySection extends StatelessWidget {
         scrollDirection: .horizontal,
         itemCount: 10,
         itemBuilder: (context, index) {
-          return Column(
-            children: [
-              Container(
-                padding: .all(16),
-                decoration: BoxDecoration(
-                  color: AppColors.themeColor.withAlpha(50),
-                  borderRadius: .circular(8),
-                ),
-                child: Icon(
-                  Icons.computer,
-                  size: 48,
-                  color: AppColors.themeColor,
-                ),
-              ),
-              Text(
-                'Electronics',
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  color: AppColors.themeColor,
-                ),
-              ),
-            ],
-          );
+          return CategoryCard();
         },
         separatorBuilder: (_, _) => SizedBox(width: 8),
       ),
     );
   }
 }
+
+

@@ -21,6 +21,11 @@ class AppTheme {
     filledButtonTheme: _filledButtonThemeData,
     appBarTheme: AppBarTheme(
       color: Colors.white,
+      titleTextStyle: TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.w600,
+        color: Colors.black
+      ),
     ),
   );
 

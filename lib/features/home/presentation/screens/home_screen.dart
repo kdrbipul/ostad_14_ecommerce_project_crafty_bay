@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ostad_14_ecommerce_project_crafty_bay/features/shared/presentation/providers/main_nav_holder_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../widgets/home_app_bar.dart';
 import '../widgets/home_carousel_slider.dart';
@@ -26,7 +28,9 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               ProductSearchBar(),
               HomeCarouselSlider(),
-              SectionHeader(headerText: 'All Categories', onTapSeeAll: () {}),
+              SectionHeader(headerText: 'All Categories', onTapSeeAll: () {
+                context.read<MainNavHolderProvider>().navigateToCategory();
+              }),
               HomeCategorySection(),
             ],
           ),

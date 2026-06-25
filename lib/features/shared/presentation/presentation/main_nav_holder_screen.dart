@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ostad_14_ecommerce_project_crafty_bay/features/home/presentation/screens/home_screen.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../app/app_colors.dart';
+import '../../../home/presentation/screens/home_screen.dart';
+import '../../../presentation/screens/category_screen.dart';
 import '../providers/main_nav_holder_provider.dart';
 
 class MainNavHolderScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _MainNavHolderScreenState extends State<MainNavHolderScreen> {
 
   final List<Widget> _screens = [
     HomeScreen(),
-    HomeScreen(),
+    CategoryScreen(),
     HomeScreen(),
     HomeScreen(),
   ];
@@ -43,8 +44,8 @@ class _MainNavHolderScreenState extends State<MainNavHolderScreen> {
                 label: 'Home',
               ),
               BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.list_dash),
-                label: 'Dashboard',
+                icon: Icon(Icons.category),
+                label: 'Category',
               ),
               BottomNavigationBarItem(
                 icon: Icon(CupertinoIcons.cart),
