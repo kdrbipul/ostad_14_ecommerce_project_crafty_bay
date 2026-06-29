@@ -4,6 +4,7 @@ import '../features/auth/presentation/screens/sign_in_screen.dart';
 import '../features/auth/presentation/screens/sign_up_screen.dart';
 import '../features/auth/presentation/screens/splash_screen.dart';
 import '../features/auth/presentation/screens/verify_otp_screen.dart';
+import '../features/products/presentation/screens/product_list_by_category_screen.dart';
 import '../features/shared/presentation/presentation/main_nav_holder_screen.dart';
 
 class AppRoutes {
@@ -20,6 +21,12 @@ class AppRoutes {
         widget = VerifyOTPScreen();
       case MainNavHolderScreen.name:
         widget = MainNavHolderScreen();
+      case ProductListByCategoryScreen.name:
+       final Map<String, dynamic> args = settings.arguments as Map<String, dynamic>;
+        widget = ProductListByCategoryScreen(
+            categoryId: args['categoryId'],
+            categoryName: args['categoryName'],
+        );
     }
     return MaterialPageRoute(builder: (ctx) => widget);
   }

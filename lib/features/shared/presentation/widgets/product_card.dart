@@ -7,13 +7,13 @@ import '../../../../app/assets_path.dart';
 class ProductCard extends StatelessWidget {
   const ProductCard({
     super.key,
-    required this.textTheme,
   });
 
-  final TextTheme textTheme;
+
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = TextTheme.of(context);
     return Card(
       shape: RoundedRectangleBorder(borderRadius: .circular(8)),
       color: Colors.white,
