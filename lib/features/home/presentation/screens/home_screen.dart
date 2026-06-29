@@ -1,10 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../app/app_colors.dart';
-import '../../../../app/assets_path.dart';
 import '../../../shared/presentation/providers/main_nav_holder_provider.dart';
+import '../../../shared/presentation/widgets/product_card.dart';
 import '../widgets/home_app_bar.dart';
 import '../widgets/home_carousel_slider.dart';
 import '../widgets/home_category_section.dart';
@@ -21,6 +19,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final textTheme = TextTheme.of(context);
     return Scaffold(
       appBar: HomeAppBar(),
       body: Padding(
@@ -31,53 +30,27 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               ProductSearchBar(),
               HomeCarouselSlider(),
-              SectionHeader(headerText: 'All Categories', onTapSeeAll: () {
-                context.read<MainNavHolderProvider>().navigateToCategory();
-              }),
+              SectionHeader(
+                headerText: 'All Categories',
+                onTapSeeAll: () {
+                  context.read<MainNavHolderProvider>().navigateToCategory();
+                },
+              ),
               HomeCategorySection(),
-              SectionHeader(headerText: 'Popular', onTapSeeAll: () {
-                // context.read<MainNavHolderProvider>().navigateToCategory();
-              }),
-              Container(
-                width: 150,
-                decoration: BoxDecoration(
-                  borderRadius: .circular(8),
-                ),
-                child: Column(
-                  crossAxisAlignment: .start,
+              SectionHeader(
+                headerText: 'Popular',
+                onTapSeeAll: () {
+                  // context.read<MainNavHolderProvider>().navigateToCategory();
+                },
+              ),
+              SingleChildScrollView(
+                scrollDirection: .horizontal,
+                child: Row(
                   children: [
-                    Container(
-                      height: 120,
-                      width: 150,
-                      decoration: BoxDecoration(
-                        color: AppColors.themeColor.withAlpha(30),
-                        borderRadius: .only(
-                          topLeft: .circular(8),
-                          topRight: .circular(8),
-                        ),
-                      ),
-                      child: Image.asset(AssetsPath.dummyPng),
-                    ),
-                    Text('Header of Product'),
-                    Row(
-                      mainAxisAlignment: .spaceBetween,
-                      children: [
-                        Text('\$300'),
-                        Wrap(
-                          children: [
-                            Icon(CupertinoIcons.star),
-                            Text('4.5')
-                          ],
-                        ),
-                        Container(
-                          child: Icon(CupertinoIcons.heart),
-                        ),
-                      ],
-                    )
-
-                  ],
+                    1, 2, 3, 4, 5,
+                  ].map((e) => ProductCard(textTheme: textTheme)).toList(),
                 ),
-              )
+              ),
             ],
           ),
         ),
@@ -85,5 +58,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-
