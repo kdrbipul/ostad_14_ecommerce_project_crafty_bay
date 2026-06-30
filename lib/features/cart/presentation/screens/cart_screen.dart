@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-import '../../../../app/assets_path.dart';
+import '../../../shared/presentation/providers/main_nav_holder_provider.dart';
+import '../widgets/cart_item.dart';
 import '../widgets/total_price_and_checkout_section.dart';
 
 class CartScreen extends StatefulWidget {
@@ -14,37 +17,36 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     final textTheme = TextTheme.of(context);
-    return Scaffold(
-      appBar: AppBar(title: Text('Cart')),
-      body: Column(
-        children: [
-          Expanded(child: ListView.builder(
-            itemCount: 4,
-              itemBuilder: (context, index){
-              return Card(
-                child: Row(
-                  children: [
-                    Image.asset(AssetsPath.dummyPng, width: 120,),
-                    Column(
-                      children: [
-                        Row(
-                          children: [
-                            Column()
-                          ],
-                        ),
-                        Row(),
-                      ],
-                    )
-                  ],
-                ),
-              );
-              }
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (_,_)=> _backToHome(),
+      child: Scaffold(
+        appBar: AppBar(
+            title: Text('Cart'),
+          leading: IconButton(
+            onPressed: _backToHome,
+            icon: Icon(CupertinoIcons.arrow_left),
           ),
-          ),
-          TotalPriceAndCheckOutSection(),
-        ],
+        ),
+        body: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: 6,
+                itemBuilder: (context, index) {
+                  return CartItem(textTheme: textTheme);
+                },
+              ),
+            ),
+            TotalPriceAndCheckOutSection(),
+          ],
+        ),
       ),
     );
+  }
+
+  void _backToHome() {
+    context.read<MainNavHolderProvider>().backToHome();
   }
 }
 
